@@ -12,13 +12,37 @@
 #import "AppDelegate.h"
 
 #import "WildeGuessCollectionViewController.h"
+#import "Realm/Realm.h"
+
+
+//realm changes- Creating model object starts
+@interface RandomQuotes : RLMObject
+
+@property(nonatomic, copy) NSString *quote ;
+@property(nonatomic, copy) NSString *author;
+
+@end
+
+@implementation RandomQuotes
+
+@end
+//realm changes- Creating model object ends
+
 
 @implementation AppDelegate {
   UIWindow *_window;
 }
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+   
+    // Use them like regular Objective‑C objects
+    RandomQuotes *myquote = [[RandomQuotes alloc] init];
+    myquote.quote = @"Hello";
+    myquote.author = @"Neelam";
+    NSLog(@"quote is : %@", myquote.quote);
+    
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
   UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
