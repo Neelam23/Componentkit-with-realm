@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52847B381E4E657E00C3D01B /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52847B271E4E656800C3D01B /* ComponentKit.framework */; };
+		52847BB81E4E720D00C3D01B /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52847BA71E4E720100C3D01B /* ComponentKit.framework */; };
 		A2BC94DC1AC235A60043B82F /* QuoteComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2BC94DB1AC235A60043B82F /* QuoteComponent.mm */; };
 		B34FB9761ABE8BA300D2D896 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B34FB95B1ABE8BA300D2D896 /* AppDelegate.mm */; };
 		B34FB9771ABE8BA300D2D896 /* FrostedQuoteComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = B34FB95E1ABE8BA300D2D896 /* FrostedQuoteComponent.mm */; };
@@ -27,65 +27,65 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52847B261E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BA61E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D0B47AB51CBD924100BB33CE;
 			remoteInfo = ComponentKit;
 		};
-		52847B281E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BA81E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A273801A1AFD144100E6F222;
 			remoteInfo = ComponentKitTestHelpers;
 		};
-		52847B2A1E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BAA1E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B342DC401AC23E8200ACAC53;
 			remoteInfo = ComponentKitTests;
 		};
-		52847B2C1E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BAC1E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B342DC8B1AC23EC300ACAC53;
 			remoteInfo = ComponentKitApplicationTests;
 		};
-		52847B2E1E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BAE1E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B342DCAA1AC23F2A00ACAC53;
 			remoteInfo = ComponentTextKitApplicationTests;
 		};
-		52847B301E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BB01E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B3EECEC21AC2366600BFC5DA;
 			remoteInfo = ComponentKitApplicationsTestsHost;
 		};
-		52847B321E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BB21E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 03B8B56A1D2A346F00EDFF59;
 			remoteInfo = ComponentKitAppleTV;
 		};
-		52847B341E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BB41E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 03A98A721D2B2BFD00C5BAC2;
 			remoteInfo = ComponentKitTestHelpersAppleTV;
 		};
-		52847B361E4E656800C3D01B /* PBXContainerItemProxy */ = {
+		52847BB61E4E720100C3D01B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+			containerPortal = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 03F1AC061D2B2A9B00867584;
 			remoteInfo = ComponentKitTestsAppleTV;
@@ -106,7 +106,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ComponentKit.xcodeproj; path = "../componentkit-master/ComponentKit.xcodeproj"; sourceTree = "<group>"; };
+		52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ComponentKit.xcodeproj; path = "componentkit-master/ComponentKit.xcodeproj"; sourceTree = "<group>"; };
 		A2BC94DA1AC235A60043B82F /* QuoteComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteComponent.h; sourceTree = "<group>"; };
 		A2BC94DB1AC235A60043B82F /* QuoteComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QuoteComponent.mm; sourceTree = "<group>"; };
 		B34FB95A1ABE8BA300D2D896 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,25 +147,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52847B381E4E657E00C3D01B /* ComponentKit.framework in Frameworks */,
+				52847BB81E4E720D00C3D01B /* ComponentKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52847B191E4E656700C3D01B /* Products */ = {
+		52847B991E4E720100C3D01B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52847B271E4E656800C3D01B /* ComponentKit.framework */,
-				52847B291E4E656800C3D01B /* libComponentKitTestHelpers.a */,
-				52847B2B1E4E656800C3D01B /* ComponentKitTests.xctest */,
-				52847B2D1E4E656800C3D01B /* ComponentKitApplicationTests.xctest */,
-				52847B2F1E4E656800C3D01B /* ComponentTextKitApplicationTests.xctest */,
-				52847B311E4E656800C3D01B /* ComponentKitApplicationsTestsHost.app */,
-				52847B331E4E656800C3D01B /* ComponentKit.framework */,
-				52847B351E4E656800C3D01B /* libComponentKitTestHelpers.a */,
-				52847B371E4E656800C3D01B /* ComponentKitTestsAppleTV.xctest */,
+				52847BA71E4E720100C3D01B /* ComponentKit.framework */,
+				52847BA91E4E720100C3D01B /* libComponentKitTestHelpers.a */,
+				52847BAB1E4E720100C3D01B /* ComponentKitTests.xctest */,
+				52847BAD1E4E720100C3D01B /* ComponentKitApplicationTests.xctest */,
+				52847BAF1E4E720100C3D01B /* ComponentTextKitApplicationTests.xctest */,
+				52847BB11E4E720100C3D01B /* ComponentKitApplicationsTestsHost.app */,
+				52847BB31E4E720100C3D01B /* ComponentKit.framework */,
+				52847BB51E4E720100C3D01B /* libComponentKitTestHelpers.a */,
+				52847BB71E4E720100C3D01B /* ComponentKitTestsAppleTV.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		786CB3B26539B7FAEBFAF12A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */,
+				52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,8 +298,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 52847B191E4E656700C3D01B /* Products */;
-					ProjectRef = 52847B181E4E656700C3D01B /* ComponentKit.xcodeproj */;
+					ProductGroup = 52847B991E4E720100C3D01B /* Products */;
+					ProjectRef = 52847B981E4E720100C3D01B /* ComponentKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -310,67 +310,67 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		52847B271E4E656800C3D01B /* ComponentKit.framework */ = {
+		52847BA71E4E720100C3D01B /* ComponentKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ComponentKit.framework;
-			remoteRef = 52847B261E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BA61E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B291E4E656800C3D01B /* libComponentKitTestHelpers.a */ = {
+		52847BA91E4E720100C3D01B /* libComponentKitTestHelpers.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libComponentKitTestHelpers.a;
-			remoteRef = 52847B281E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BA81E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B2B1E4E656800C3D01B /* ComponentKitTests.xctest */ = {
+		52847BAB1E4E720100C3D01B /* ComponentKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ComponentKitTests.xctest;
-			remoteRef = 52847B2A1E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BAA1E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B2D1E4E656800C3D01B /* ComponentKitApplicationTests.xctest */ = {
+		52847BAD1E4E720100C3D01B /* ComponentKitApplicationTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ComponentKitApplicationTests.xctest;
-			remoteRef = 52847B2C1E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BAC1E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B2F1E4E656800C3D01B /* ComponentTextKitApplicationTests.xctest */ = {
+		52847BAF1E4E720100C3D01B /* ComponentTextKitApplicationTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ComponentTextKitApplicationTests.xctest;
-			remoteRef = 52847B2E1E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BAE1E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B311E4E656800C3D01B /* ComponentKitApplicationsTestsHost.app */ = {
+		52847BB11E4E720100C3D01B /* ComponentKitApplicationsTestsHost.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = ComponentKitApplicationsTestsHost.app;
-			remoteRef = 52847B301E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BB01E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B331E4E656800C3D01B /* ComponentKit.framework */ = {
+		52847BB31E4E720100C3D01B /* ComponentKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ComponentKit.framework;
-			remoteRef = 52847B321E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BB21E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B351E4E656800C3D01B /* libComponentKitTestHelpers.a */ = {
+		52847BB51E4E720100C3D01B /* libComponentKitTestHelpers.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libComponentKitTestHelpers.a;
-			remoteRef = 52847B341E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BB41E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52847B371E4E656800C3D01B /* ComponentKitTestsAppleTV.xctest */ = {
+		52847BB71E4E720100C3D01B /* ComponentKitTestsAppleTV.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ComponentKitTestsAppleTV.xctest;
-			remoteRef = 52847B361E4E656800C3D01B /* PBXContainerItemProxy */;
+			remoteRef = 52847BB61E4E720100C3D01B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
