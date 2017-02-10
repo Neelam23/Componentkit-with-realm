@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A56F96D6522636D55704AA5BFBE6C00547118241",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9FE6571FAC468F6939CEEC055509C82E559FECDF" : 9223372036854775807,
+    "A56F96D6522636D55704AA5BFBE6C00547118241" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0EAC844D-AC52-45BE-9DD6-D5DDA2E8F2D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9FE6571FAC468F6939CEEC055509C82E559FECDF" : "",
+    "A56F96D6522636D55704AA5BFBE6C00547118241" : "Componentkit-with-realm\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WildeGuess",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WildeGuess\/WildeGuess.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Neelam23\/neelam23.github.io",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FE6571FAC468F6939CEEC055509C82E559FECDF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Neelam23\/Componentkit-with-realm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A56F96D6522636D55704AA5BFBE6C00547118241"
+    }
+  ]
+}
