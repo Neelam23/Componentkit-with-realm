@@ -48,11 +48,17 @@ Property/field2: QuoteAuthor
 
 
 Fetching data dynamically
+
 •	SO I am done with storing data in the database but now I have to get the data and show it in the front end of the app. I tried to use the same code and logic of wildeguess app. But it disnt work very well
+
 •	Issue here is – Its easy to fetch data from realm database but it have a different result type RLMResults ,RLMArary etc and its not possible to change them to NSString , NSArray or NSDictionary.
+
 •	So, I used the RLMResults for getting data and then passed the result properties into another classes, which helps in sending data back to view controlled, and display on the app view.
+
 •	I solved the above compatibility issue by looking at how to query data from realm – I tried different ways and finally it worked. (This took a lot of time)
+
 •	And one last thing that caused some issue was the generating random quotes. Because database gives back data in the same array sequence at it is stored and we cannot randomize it. Finally I worked around a little patch to randomize the array index when sending data back to view in the end.
+
 
 Other issues:
 
