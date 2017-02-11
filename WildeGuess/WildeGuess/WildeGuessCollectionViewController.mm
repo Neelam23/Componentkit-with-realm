@@ -19,6 +19,7 @@
 #import "QuoteContext.h"
 #import "QuotesPage.h"
 
+
 @interface WildeGuessCollectionViewController () <CKComponentProvider, UICollectionViewDelegateFlowLayout>
 @end
 
@@ -40,9 +41,48 @@
   return self;
 }
 
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+    
+    
+// create Real DB Once with these values- Considering as if this data is coming from front-end or backend server
+    
+    NSArray *quotes= @[
+                        @"He is really not so ugly after all, provided, of course, that one shuts one's eyes, and does not look at him.",
+                        @"People who count their chickens before they are hatched act very wisely because chickens run about so absurdly that it's impossible to count them accurately.",
+                        @"It is better to have a permanent income than to be fascinating.",
+                        @"Education is an admirable thing. But it is well to remember from time to time that nothing that is worth knowing can be taught.",
+                        @"A man who does not think for himself does not think at all.",
+                        @"The philosophers have only interpreted the world, in various ways. The point, however, is to change it.",
+                        @"False words are not only evil in themselves, but they infect the soul with evil.",
+                        @"The greatest honor history can bestow is the title of peacemaker.",
+                        @"Sticks and stones may break my bones but words will never hurt me.",
+                        @"I have the simplest tastes. I am always satisfied with the best",
+                        @"A thing is not necessarily true because a man dies for it.",
+                        @"A poet can survive everything but a misprint."
+                        ];
+    NSArray *author= @[
+                        @"Oscar Wilde",
+                        @"Oscar Wilde",
+                        @"Oscar Wilde",
+                        @"Oscar Wilde",
+                        @"Oscar Wilde",
+                        @"Anonymous",
+                        @"Anonymous",
+                        @"Anonymous",
+                        @"Anonymous",
+                        @"Oscar Wilde",
+                        @"Oscar Wilde",
+                        @"Oscar Wilde"
+                      ];
+    
+    [_quoteModelController clearCacheDataFromRealmbeforeInsert];
+    
+    [_quoteModelController insertDataIntoRealmWithQuotes:quotes withAuthor:author];
+
+    
   // Preload images for the component context that need to be used in component preparation. Components preparation
   // happens on background threads but +[UIImage imageNamed:] is not thread safe and needs to be called on the main
   // thread. The preloaded images are then cached on the component context for use inside components.
@@ -69,7 +109,7 @@
     withInsertedSections:[NSIndexSet indexSetWithIndex:0]]
    build];
   [_dataSource applyChangeset:initialChangeset mode:CKUpdateModeAsynchronous userInfo:nil];
-  [self _enqueuePage:[_quoteModelController fetchNewQuotesPageWithCount:4]];
+  [self _enqueuePage:[_quoteModelController fetchNewQuotesPageWithCount:6]];
 }
 
 - (void)_enqueuePage:(QuotesPage *)quotesPage
@@ -127,7 +167,7 @@
     return ;
   }
   if (scrolledToBottomWithBuffer(scrollView.contentOffset, scrollView.contentSize, scrollView.contentInset, scrollView.bounds)) {
-    [self _enqueuePage:[_quoteModelController fetchNewQuotesPageWithCount:8]];
+    [self _enqueuePage:[_quoteModelController fetchNewQuotesPageWithCount:12]];
   }
 }
 

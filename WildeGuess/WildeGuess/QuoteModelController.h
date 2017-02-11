@@ -25,5 +25,8 @@
  @return A page of quotes containing the end insertion position and the list of quotes to insert.
  */
 - (QuotesPage *)fetchNewQuotesPageWithCount:(NSInteger)count;
+-(void) clearCacheDataFromRealmbeforeInsert;
+-(void) insertDataIntoRealmWithQuotes:(NSArray*)quoteTextInput withAuthor:(NSArray *)quoteAuthorInput;
+
 
 @end

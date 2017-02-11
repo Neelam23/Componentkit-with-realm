@@ -16,6 +16,20 @@
 #import "Quote.h"
 #import "QuoteDisplayStyle.h"
 #import "QuotesPage.h"
+#import "Realm/Realm.h"
+
+
+//realm changes- Creating model object starts
+@interface RandomQuotesSchema : RLMObject
+@property(nonatomic, copy) NSString *quoteText ;
+@property(nonatomic, copy) NSString *quoteAuthor;
+@end
+RLM_ARRAY_TYPE(RandomQuotesSchema)
+
+@implementation RandomQuotesSchema
+@end
+//realm changes- Creating model object ends
+
 
 @implementation QuoteModelController
 {
@@ -30,35 +44,72 @@
   return self;
 }
 
+-(void) clearCacheDataFromRealmbeforeInsert
+{
+    
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm deleteAllObjects];
+    [defaultRealm commitWriteTransaction];
+    
+    NSLog(@"Cleared all data");
+}
+
+
+-(void) insertDataIntoRealmWithQuotes:(NSArray*)quoteTextInput withAuthor:(NSArray *)quoteAuthorInput
+{
+    //Creating model object and assigning values for each field
+  
+    
+    for (int i=0; i< quoteTextInput.count && quoteAuthorInput.count; i++)
+    {
+        RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+        RandomQuotesSchema *randomquoteObject = [[RandomQuotesSchema alloc] init];
+        randomquoteObject.quoteText = quoteTextInput[i];
+        randomquoteObject.quoteAuthor = quoteAuthorInput[i];
+        
+        NSLog(@"quoteText: %@ ",randomquoteObject.quoteText);
+        NSLog(@"quoteAuther: %@ ",randomquoteObject.quoteAuthor);
+    
+       //writing data to the Realm DB with transaction block
+        [defaultRealm beginWriteTransaction ];
+        [defaultRealm addObject:randomquoteObject];
+        [defaultRealm commitWriteTransaction];
+    
+        NSLog(@"%i record written to DB", i+1);
+    }
+        
+    
+}
+
+
 - (QuotesPage *)fetchNewQuotesPageWithCount:(NSInteger)count
 {
-  NSAssert(count >= 1, @"Count should be a positive integer");
-  NSArray * quotes = generateRandomQuotes(count);
-  QuotesPage *quotesPage = [[QuotesPage alloc] initWithQuotes:quotes
-                                                     position:_numberOfObjects];
-  _numberOfObjects += count;
-  return quotesPage;
+    NSAssert(count >= 1, @"Count should be a positive integer");
+    NSArray * quotes = generateRandomQuotes(count);
+    QuotesPage *quotesPage = [[QuotesPage alloc] initWithQuotes:quotes
+                                                       position:_numberOfObjects];
+    _numberOfObjects += count;
+    return quotesPage;
 }
+
 
 #pragma mark - Random Quote Generation
 
 static NSArray *generateRandomQuotes(NSInteger count)
 {
-  NSMutableArray *_quotes = [NSMutableArray new];
-  for (NSUInteger i = 0; i< count; i++) {
-    NSDictionary *randomQuote = generateRandomQuoteInfo();
-    Quote *quote  = [[Quote alloc] initWithText:randomQuote[@"text"]
-                                         author:randomQuote[@"author"]
-                                          style:generateStyle(i)];
+    NSMutableArray *_quotes = [NSMutableArray new];
+    RLMResults <RandomQuotesSchema *> *result = [RandomQuotesSchema allObjects];
+    NSLog(@"Result array:%@",result);
+    
+    for (NSUInteger i = 0; i< count; i++) {
+       int random_index = arc4random_uniform(12); //generate random number from 12 DB records we have
+       Quote *quote  = [[Quote alloc] initWithText:result[random_index].quoteText
+                                           author:result[random_index].quoteAuthor
+                                           style:generateStyle(i)];
     [_quotes addObject:quote];
   }
   return _quotes;
-}
-
-static NSDictionary *generateRandomQuoteInfo()
-{
-  NSArray *quotes = quotesList();
-  return quotes[arc4random_uniform((uint32_t)[quotes count])];
 }
 
 static QuoteDisplayStyle generateStyle(NSUInteger index)
@@ -74,101 +125,6 @@ static QuoteDisplayStyle generateStyle(NSUInteger index)
     default:
       return QuoteDisplayStyleSombre;
   }
-}
-
-static NSArray *quotesList()
-{
-  static NSArray *quotes;
-  static dispatch_once_t once;
-  dispatch_once(&once, ^{
-    quotes = @[
-               @{
-                 @"text": @"I have the simplest tastes. I am always satisfied with the best.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"A thing is not necessarily true because a man dies for it.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"A poet can survive everything but a misprint.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"He is really not so ugly after all, provided, of course, that one shuts one's eyes, and does not look at him.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"People who count their chickens before they are hatched act very wisely because chickens run about so absurdly that it's impossible to count them accurately.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"It is better to have a permanent income than to be fascinating.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"Education is an admirable thing. But it is well to remember from time to time that nothing that is worth knowing can be taught.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"Art is the only serious thing in the world. And the artist is the only person who is never serious.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"A man who does not think for himself does not think at all.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text": @"Prayer must never be answered: if it is, it ceases to be prayer and becomes correspondence.",
-                 @"author": @"Oscar Wilde",
-                 },
-               @{
-                 @"text":@"The philosophers have only interpreted the world, in various ways. The point, however, is to change it.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"To improve is to change, so to be perfect is to have changed often.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"False words are not only evil in themselves, but they infect the soul with evil.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"It has been said that love robs those who have it of their wit, and gives it to those who have none.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"The greatest honor history can bestow is the title of peacemaker.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"The guest who has escaped from the roof, will think twice before he comes back in by the door.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"I'll not assert that it was a diversion which prevented a war, but nevertheless, it was a diversion.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"I gyve unto my wief my second best bed with the furniture.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"He who knows when he can fight and when he cannot will be victorious.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"Sticks and stones may break my bones but words will never hurt me.",
-                 @"author": @"Anonymous",
-                 },
-               @{
-                 @"text":@"It'll be boring when it's not fun any more.",
-                 @"author": @"Anonymous",
-                 }
-               ];
-  });
-  return quotes;
 }
 
 @end

@@ -12,21 +12,7 @@
 #import "AppDelegate.h"
 
 #import "WildeGuessCollectionViewController.h"
-#import "Realm/Realm.h"
 
-
-//realm changes- Creating model object starts
-@interface RandomQuotes : RLMObject
-
-@property(nonatomic, copy) NSString *quote ;
-@property(nonatomic, copy) NSString *author;
-
-@end
-
-@implementation RandomQuotes
-
-@end
-//realm changes- Creating model object ends
 
 
 @implementation AppDelegate {
@@ -43,22 +29,22 @@
     myquote.author = @"Neelam";
     NSLog(@"quote is : %@", myquote.quote); */
     
-    //Creating model object and assigning values for each field
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    RandomQuotes *randomquote = [[RandomQuotes alloc] init];
-    randomquote.quote = @"I have the simplest tastes. I am always satisfied with the best.";
-    randomquote.author = @"Oscar Wilde";
+//    //Creating model object and assigning values for each field
+//    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+//    RandomQuotes *randomquote = [[RandomQuotes alloc] init];
+//    randomquote.quote = @"I have the simplest tastes. I am always satisfied with the best.";
+//    randomquote.author = @"Oscar Wilde";
+//    
+//    //writing data to the Realm DB with transaction block
+//    [defaultRealm transactionWithBlock:^{
+//        [defaultRealm addObject:randomquote];
+//    }];
+//    
+//    NSLog(@"one quote written to DB");
+//    
+//    RLMResults *result = [RandomQuotes allObjects];
+//    NSLog(@"%@a", result);
     
-    //writing data to the Realm DB with transaction block
-    [defaultRealm transactionWithBlock:^{
-        [defaultRealm addObject:randomquote];
-    }];
-    
-    NSLog(@"one quote written to DB");
-    
-    RLMResults *result = [RandomQuotes allObjects];
-    NSLog(@"%@a", result);
-      
     
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
