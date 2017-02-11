@@ -37,11 +37,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
    
-    // Use them like regular Objective‑C objects
-    RandomQuotes *myquote = [[RandomQuotes alloc] init];
+    // Test if Realm is integrated
+    /* RandomQuotes *myquote = [[RandomQuotes alloc] init];
     myquote.quote = @"Hello";
     myquote.author = @"Neelam";
-    NSLog(@"quote is : %@", myquote.quote);
+    NSLog(@"quote is : %@", myquote.quote); */
+    
+    //Creating model object and assigning values for each field
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    RandomQuotes *randomquote = [[RandomQuotes alloc] init];
+    randomquote.quote = @"I have the simplest tastes. I am always satisfied with the best.";
+    randomquote.author = @"Oscar Wilde";
+    
+    //writing data to the Realm DB with transaction block
+    [defaultRealm transactionWithBlock:^{
+        [defaultRealm addObject:randomquote];
+    }];
+    
+    NSLog(@"one quote written to DB");
+    
+    RLMResults *result = [RandomQuotes allObjects];
+    NSLog(@"%@a", result);
+      
     
   _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
